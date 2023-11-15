@@ -1,0 +1,17 @@
+.card {
+  display: block;
+  padding: $base-padding;
+  border: $base-border-thick solid black;
+  box-shadow: $base-box-shadow;
+  max-width: 400px;
+
+  .card-title {
+    font-size: $base-font-size;
+    padding-bottom: $base-padding;
+    font-weight: bold;
+  }
+
+  .card-body {
+    font-size: $base-font-size;
+  }
+}
