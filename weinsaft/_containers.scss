@@ -1,0 +1,72 @@
+$container-breakpoints: (
+  "xxl": 1140px,
+  "xl": 960px,
+  "lg": 720px,
+  "md": 540px,
+  "sm": unset,
+);
+
+// base layout classes
+.container,
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  max-width: 1320px;
+}
+
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  @include max-xxl {
+    max-width: map-get($container-breakpoints, "xxl");
+  }
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm {
+  @include max-xl {
+    max-width: map-get($container-breakpoints, "xl");
+  }
+}
+
+.container,
+.container-md,
+.container-sm {
+  @include max-lg {
+    max-width: map-get($container-breakpoints, "lg");
+  }
+}
+
+.container,
+.container-sm {
+  @include max-md {
+    max-width: map-get($container-breakpoints, "md");
+  }
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  @include max-sm {
+    max-width: unset;
+    padding: 0 10px;
+  }
+}

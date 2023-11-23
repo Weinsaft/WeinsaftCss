@@ -21,7 +21,7 @@ hr {
   display: flex;
   flex-flow: row wrap;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .max-col-6 {
     box-sizing: border-box;
     flex-grow: 0;
@@ -49,6 +49,48 @@ hr {
     width: 100%;
   }
 }
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1320px;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: unset;
+    padding: 0 10px;
+  }
+}
+
 .text-primary {
   color: orange;
 }

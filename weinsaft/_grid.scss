@@ -8,15 +8,8 @@ $grid-gaps: (
   "3": 30px,
 );
 $layout-values: flex-start, flex-end, center, space-between, space-around;
+$align-values: flex-start, flex-end, center, normal, baseline;
 
-// base layout classes
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
 
 .row {
   display: flex;
@@ -38,6 +31,13 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 @each $val in $layout-values {
   .justify-#{$val} {
     justify-content: $val;
+  }
+}
+
+// align-items
+@each $val in $layout-values {
+  .align-items-#{$val} {
+    align-items: $val;
   }
 }
 
